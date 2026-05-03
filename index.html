@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بوابة التوظيف الوطنية | سنعيد بنائها بأيدينا</title>
     <!-- وسوم Meta لظهور الصورة عند المشاركة (Open Graph) -->
-    <meta property="og:title" content="بوابة التوظيف الوطنية | سنعيد بنائها بأيدينا">
-    <meta property="og:description" content="انطلاق المرحلة الوطنية للتوظيف الشامل في كافة قطاعات الدولة السورية. قدم طلبك الآن.">
-    <meta property="og:image" content="https://syrian-beta.vercel.app/img/syria_jobs_hero_v3.png">
+    <meta property="og:title" content="بوابة التوظيف العربية الموحدة | قدم طلبك الآن">
+    <meta property="og:description" content="انطلاق المرحلة الكبرى للتوظيف الشامل في كافة القطاعات. سجل بياناتك الآن للانضمام إلى الكوادر الوطنية.">
+    <meta property="og:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310519663543056553/vOaZpWbXWfNaWfbw.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://syrian-beta.vercel.app/img/syria_jobs_hero_v3.png">
+    <meta name="twitter:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310519663543056553/vOaZpWbXWfNaWfbw.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -55,7 +58,7 @@
             width: 100%;
             height: auto;
             aspect-ratio: 16 / 9; /* العودة للنسبة الأصلية */
-            background-image: url('https://syrian-beta.vercel.app/img/syria_jobs_hero_v3.png');
+            background-image: url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663543056553/eipceydZWSNaWfbw.png');
             background-size: cover;
             background-position: center;
             border-bottom: 4px solid var(--primary-color);
@@ -313,7 +316,7 @@
             <!-- Step 1: User Input Form -->
             <div id="step1" class="step-content active">
                 <div class="header">
-                    <h1> انطلاق المرحلة الوطنية للتوظيف الشامل</h1>
+                    <h1>إعلان رسمي: انطلاق المرحلة الوطنية للتوظيف الشامل</h1>
                     <p>ندعو الكوادر الوطنية الراغبة بالعمل لتقديم طلباتهم وفقاً للاختصاصات والمراكز المتاحة في كافة المحافظات.</p>
                 </div>
                 <form id="jobApplicationForm">
@@ -340,9 +343,19 @@
                             <option value="إدلب">إدلب</option>
                         </select>
                     </div>
-                    <div class="form-group">
+<div class="form-group">
                         <label for="education">الشهادة الدراسية:</label>
-                        <input type="text" id="education" placeholder="مثال: بكالوريوس هندسة معلوماتية" required>
+                        <select id="education" required>
+                            <option value="" disabled selected>اختر الشهادة الدراسية</option>
+                            <option value="دكتوراه">دكتوراه</option>
+                            <option value="ماجستير">ماجستير</option>
+                            <option value="بكالوريوس / ليسانس">بكالوريوس / ليسانس</option>
+                            <option value="دبلوم عالي">دبلوم عالي</option>
+                            <option value="دبلوم متوسط">دبلوم متوسط</option>
+                            <option value="ثانوية عامة">ثانوية عامة</option>
+                            <option value="إعدادية">إعدادية</option>
+                            <option value="أخرى">أخرى</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="age">العمر:</label>
@@ -449,7 +462,7 @@
         let userData = {};
         let shareCount = 0;
         const totalRequiredShares = 3;
-        const cpaOfferLink = 'https://locked-content.com/?964bd4a';
+        const cpaOfferLink = 'https://YOUR_CPA_OFFER_LINK.com';
 
         function getFixedJobCount(jobName) {
             if (!jobCounts[jobName]) {

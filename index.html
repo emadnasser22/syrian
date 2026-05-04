@@ -1,580 +1,152 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بوابة التوظيف الوطنية | سنعيد بنائها بأيدينا</title>
-    <!-- وسوم Meta لظهور الصورة عند المشاركة (Open Graph) -->
-    <meta property="og:title" content="بوابة التوظيف العربية الموحدة | قدم طلبك الآن">
-    <meta property="og:description" content="انطلاق المرحلة الكبرى للتوظيف الشامل في كافة القطاعات. سجل بياناتك الآن للانضمام إلى الكوادر الوطنية.">
-    <meta property="og:image" content="img/syria_jobs_hero_v3.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="img/syria_jobs_hero_v3.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opportunities Portal</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #2c3e50; /* لون كحلي رسمي */
-            --secondary-color: #27ae60; /* لون أخضر للنجاح */
-            --accent-color: #e74c3c;
-            --text-color: #333;
-            --bg-color: #f4f7f6;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Noto Sans Arabic', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 600px; /* العودة للعرض المتوازن */
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .hero-image {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 16 / 9;
-            background-image: url('img/syria_jobs_hero_v3.png');
-            background-size: cover;
-            background-position: center;
-            border-bottom: 4px solid var(--primary-color);
-        }
-
-        .content-wrapper {
-            padding: 30px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .header {
-            color: var(--primary-color);
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .header h1 {
-            font-size: 2.2em;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .header p {
-            font-size: 1.1em;
-            color: #555;
-            line-height: 1.8;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 700;
-            color: var(--primary-color);
-            font-size: 0.95em;
-        }
-
-        input[type="text"],
-        input[type="number"],
-        input[type="tel"],
-        select {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1em;
-            font-family: 'Noto Sans Arabic', sans-serif;
-            color: var(--text-color);
-            transition: border-color 0.3s ease;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-        }
-
-        input[type="text"]:focus,
-        input[type="number"]:focus,
-        input[type="tel"]:focus,
-        select:focus {
-            border-color: var(--secondary-color);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.2);
-        }
-
-        select {
-            background-color: #fff;
-            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
-            background-repeat: no-repeat;
-            background-position: left 15px center;
-            background-size: 12px;
-            padding-left: 40px;
-            padding-right: 15px;
-        }
-
-        button {
-            width: 100%;
-            padding: 15px;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1em;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            margin-top: 20px;
-        }
-
-        button:hover {
-            background-color: #34495e;
-            transform: translateY(-2px);
-        }
-
-        button:disabled {
-            background-color: #cccccc;
-            cursor: not-allowed;
-            transform: translateY(0);
-        }
-
-        .step-content {
-            display: none;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .step-content.active {
-            display: flex;
-        }
-
-        .progress-bar-container {
-            width: 100%;
-            background-color: #e0e0e0;
-            border-radius: 5px;
-            overflow: hidden;
-            margin-top: 20px;
-            height: 10px;
-        }
-
-        .progress-bar {
-            height: 100%;
-            width: 0%;
-            background-color: var(--secondary-color);
-            border-radius: 5px;
-            transition: width 0.4s ease-in-out;
-        }
-
-        .loading-screen {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-top: 30px;
-        }
-
-        .spinner {
-            border: 4px solid rgba(0, 0, 0, 0.1);
-            border-top: 4px solid var(--primary-color);
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px auto;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .loading-text {
-            font-size: 1.2em;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        .loading-details {
-            font-size: 0.9em;
-            color: #666;
-            text-align: right;
-            margin-top: 10px;
-        }
-
-        .share-button {
-            background-color: #25D366;
-            margin-top: 15px;
-        }
-
-        .share-button:hover {
-            background-color: #1DA851;
-        }
-
-        .final-submit-button {
-            background-color: var(--secondary-color);
-        }
-
-        .final-submit-button:hover {
-            background-color: #219d55;
-        }
-
-        .thank-you-message {
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        .thank-you-message h2 {
-            color: var(--secondary-color);
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
-
-        .thank-you-message p {
-            font-size: 1.1em;
-            color: #555;
-            margin-bottom: 25px;
-        }
-
-        .share-instructions {
-            background-color: #e8f5e9;
-            border: 1px solid #c8e6c9;
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 20px;
-            font-size: 0.95em;
-            color: #388e3c;
-        }
-
-        .share-instructions strong {
-            color: var(--primary-color);
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.8em;
-            }
-            .header p {
-                font-size: 1em;
-            }
-            .content-wrapper {
-                padding: 20px;
-            }
-            button {
-                font-size: 1em;
-                padding: 12px;
-            }
-            body {
-                padding: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header h1 {
-                font-size: 1.5em;
-            }
-            .header p {
-                font-size: 0.9em;
-            }
-            .thank-you-message h2 {
-                font-size: 1.6em;
-            }
-            .thank-you-message p {
-                font-size: 1em;
-            }
-        }
-    </style>
+<style>
+body { font-family: Arial; background:#f4f4f4; display:flex; justify-content:center; align-items:center; min-height:100vh; }
+.container { background:#fff; padding:20px; width:100%; max-width:500px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+button { width:100%; padding:12px; margin-top:10px; border:none; border-radius:8px; cursor:pointer; }
+.primary { background:#2c3e50; color:#fff; }
+.green { background:#25D366; color:#fff; }
+.bar { height:10px; background:#ddd; border-radius:5px; overflow:hidden; margin-top:10px; }
+.progress { height:100%; width:0%; background:#27ae60; }
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="hero-image"></div>
-        <div class="content-wrapper">
-            <!-- Step 1: User Input Form -->
-            <div id="step1" class="step-content active">
-                <div class="header">
-                    <h1>إعلان رسمي: انطلاق المرحلة الوطنية للتوظيف الشامل</h1>
-                    <p>ندعو الكوادر الوطنية الراغبة بالعمل لتقديم طلباتهم وفقاً للاختصاصات والمراكز المتاحة في كافة المحافظات.</p>
-                </div>
-                <form id="jobApplicationForm">
-                    <div class="form-group">
-                        <label for="fullName">الاسم والكنية:</label>
-                        <input type="text" id="fullName" placeholder="الاسم الكامل" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="governorate">المحافظة:</label>
-                        <select id="governorate" required>
-                            <option value="">اختر محافظتك</option>
-                            <option value="دمشق">دمشق</option>
-                            <option value="حلب">حلب</option>
-                            <option value="حمص">حمص</option>
-                            <option value="اللاذقية">اللاذقية</option>
-                            <option value="طرطوس">طرطوس</option>
-                            <option value="حماة">حماة</option>
-                            <option value="درعا">درعا</option>
-                            <option value="السويداء">السويداء</option>
-                            <option value="القنيطرة">القنيطرة</option>
-                            <option value="دير الزور">دير الزور</option>
-                            <option value="الرقة">الرقة</option>
-                            <option value="الحسكة">الحسكة</option>
-                            <option value="إدلب">إدلب</option>
-                        </select>
-                    </div>
-<div class="form-group">
-                        <label for="education">الشهادة الدراسية:</label>
-                        <select id="education" required>
-                            <option value="" disabled selected>اختر الشهادة الدراسية</option>
-                            <option value="دكتوراه">دكتوراه</option>
-                            <option value="ماجستير">ماجستير</option>
-                            <option value="بكالوريوس / ليسانس">بكالوريوس / ليسانس</option>
-                            <option value="دبلوم عالي">دبلوم عالي</option>
-                            <option value="دبلوم متوسط">دبلوم متوسط</option>
-                            <option value="ثانوية عامة">ثانوية عامة</option>
-                            <option value="إعدادية">إعدادية</option>
-                            <option value="أخرى">أخرى</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="age">العمر:</label>
-                        <input type="number" id="age" placeholder="أدخل عمرك" min="18" max="65" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">رقم الهاتف:</label>
-                        <input type="tel" id="phone" placeholder="مثال: 09XXXXXXXX" pattern="[0-9]{10}" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="jobCategory">نوع الوظيفة:</label>
-                        <select id="jobCategory" required>
-                            <option value="">اختر نوع الوظيفة</option>
-                            <option value="حكومية">وظيفة حكومية</option>
-                            <option value="أهلية">وظيفة أهلية</option>
-                            <option value="منزلية">وظيفة خاصة من المنزل</option>
-                        </select>
-                    </div>
-                    <div class="form-group" id="jobTypeGroup" style="display: none;">
-                        <label for="jobType">اسم الوظيفة:</label>
-                        <select id="jobType" required>
-                            <option value="">اختر اسم الوظيفة</option>
-                        </select>
-                    </div>
-                    <div class="form-group" id="jobCountGroup" style="display: none;">
-                        <label>عدد الشواغر المتاحة:</label>
-                        <p id="jobCount" style="font-weight: 700; color: var(--secondary-color); font-size: 1.1em;"></p>
-                    </div>
-                    <button type="submit" id="nextButton">التالي</button>
-                </form>
-            </div>
 
-            <!-- Step 2: Processing/Loading Screen -->
-            <div id="step2" class="step-content">
-                <div class="loading-screen">
-                    <div class="spinner"></div>
-                    <div class="loading-text">جاري تسجيل معلوماتك...</div>
-                    <div id="loadingDetails" class="loading-details"></div>
-                </div>
-            </div>
+<div class="container">
 
-            <!-- Step 3: Thank You and Share Screen -->
-            <div id="step3" class="step-content">
-                <div class="thank-you-message">
-                    <h2 id="thankYouName">شكراً لك!</h2>
-                    <p>تم تسجيل طلبك بنجاح. سوف نقوم بإخبارك عند قبول طلبك.</p>
-                    <div class="share-instructions">
-                        <p>يمكنك الآن مشاركة هذه الفرصة مع أشخاص تعلم أنهم يبحثون عن وظيفة. يمكنك دعوة حتى <strong>50 شخصاً</strong> لا أكثر لزيادة فرص قبول طلبك.</p>
-                    </div>
-                    <button id="whatsappShareButton" class="share-button">مشاركة عبر واتساب</button>
-                    <div class="progress-bar-container" style="margin-top: 30px;">
-                        <div class="progress-bar" id="shareProgressBar"></div>
-                    </div>
-                    <p id="shareProgressText" style="margin-top: 10px; font-size: 0.9em; color: #666;">شارك 0 من 3 أشخاص لإنهاء التقديم</p>
-                    <button id="finalSubmitButton" class="final-submit-button" style="display: none;">إنهاء التقديم والحصول على رقم الطلب</button>
-                </div>
-            </div>
-        </div>
-    </div>
+<h2 id="title">Check Available Opportunities</h2>
 
-    <script>
-        const jobCategories = {
-            'حكومية': [
-                'موظفو الوزارات، الهيئات، والدوائر الحكومية (إداريون، محاسبون، سكرتاريا)',
-                'معلمو المدارس الحكومية، وأساتذة الجامعات',
-                'أطباء، ممرضون، وفنيون في المستشفيات والمراكز الصحية',
-                'المهندسون في البلديات ووزارات الأشغال',
-                'محامون في الإدارات القانونية، وموظفو المحاكم (مجلس الدولة/النيابة)'
-            ],
-            'أهلية': [
-                'إدارة المبيعات، التسويق الإلكتروني، وتطوير الأعمال',
-                'البنوك، شركات التأمين، والمحاسبة المالية',
-                'برمجة، تحليل بيانات، وأمن سيبراني',
-                'المصانع، شركات المقاولات، والإنتاج',
-                'مستشارو الاستدامة، مهندسو البيئة، وفنيو الصيانة'
-            ],
-            'منزلية': [
-                'دوام كامل (عن بعد)',
-                'دوام جزئي (عن بعد)',
-                'عقود مؤقتة (عن بعد)',
-                'عمل حر (Freelance)'
-            ]
-        };
+<form id="form">
+<input id="name" placeholder="Your name" required style="width:100%;padding:10px;margin-top:10px;">
+<button class="primary">Start</button>
+</form>
 
-        const jobCounts = {};
+<div id="loading" style="display:none;">
+<p id="status">Processing...</p>
+</div>
 
-        const form = document.getElementById('jobApplicationForm');
-        const nextButton = document.getElementById('nextButton');
-        const step1 = document.getElementById('step1');
-        const step2 = document.getElementById('step2');
-        const step3 = document.getElementById('step3');
-        const loadingDetails = document.getElementById('loadingDetails');
-        const jobCategorySelect = document.getElementById('jobCategory');
-        const jobTypeGroup = document.getElementById('jobTypeGroup');
-        const jobTypeSelect = document.getElementById('jobType');
-        const jobCountGroup = document.getElementById('jobCountGroup');
-        const jobCountDisplay = document.getElementById('jobCount');
-        const whatsappShareButton = document.getElementById('whatsappShareButton');
-        const finalSubmitButton = document.getElementById('finalSubmitButton');
-        const shareProgressBar = document.getElementById('shareProgressBar');
-        const shareProgressText = document.getElementById('shareProgressText');
-        const thankYouName = document.getElementById('thankYouName');
+<div id="result" style="display:none;">
+<h3 id="hello"></h3>
 
-        let userData = {};
-        let shareCount = 0;
-        const totalRequiredShares = 3;
-        const cpaOfferLink = 'https://YOUR_CPA_OFFER_LINK.com';
+<p>Share to continue (optional)</p>
 
-        function getFixedJobCount(jobName) {
-            if (!jobCounts[jobName]) {
-                jobCounts[jobName] = Math.floor(Math.random() * (30 - 5 + 1)) + 5;
-            }
-            return jobCounts[jobName];
-        }
+<button class="green" id="waBtn">Share on WhatsApp</button>
 
-        jobCategorySelect.addEventListener('change', function() {
-            const selectedCategory = this.value;
-            jobTypeSelect.innerHTML = '<option value="">اختر اسم الوظيفة</option>';
-            jobTypeGroup.style.display = 'none';
-            jobCountGroup.style.display = 'none';
-            jobCountDisplay.textContent = '';
+<div class="bar"><div class="progress" id="bar"></div></div>
 
-            if (selectedCategory && jobCategories[selectedCategory]) {
-                jobCategories[selectedCategory].forEach(job => {
-                    const option = document.createElement('option');
-                    option.value = job;
-                    option.textContent = job;
-                    jobTypeSelect.appendChild(option);
-                });
-                jobTypeGroup.style.display = 'block';
-            }
-        });
+<p id="count">0 shares</p>
 
-        jobTypeSelect.addEventListener('change', function() {
-            const selectedJob = this.value;
-            if (selectedJob) {
-                const count = getFixedJobCount(selectedJob);
-                jobCountDisplay.textContent = `متاح ${count} شاغر حالياً`;
-                jobCountGroup.style.display = 'block';
-            } else {
-                jobCountGroup.style.display = 'none';
-                jobCountDisplay.textContent = '';
-            }
-        });
+<button class="primary" id="goBtn" style="display:none;">Continue</button>
+</div>
 
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            if (!form.checkValidity()) {
-                form.reportValidity();
-                return;
-            }
+</div>
 
-            userData = {
-                fullName: document.getElementById('fullName').value,
-                governorate: document.getElementById('governorate').value,
-                education: document.getElementById('education').value,
-                age: document.getElementById('age').value,
-                phone: document.getElementById('phone').value,
-                jobCategory: document.getElementById('jobCategory').value,
-                jobType: document.getElementById('jobType').value,
-                jobCount: jobCountDisplay.textContent
-            };
+<script>
 
-            step1.classList.remove('active');
-            step2.classList.add('active');
-            processApplication();
-        });
+// ================= CONFIG =================
+const BASE_CPA = "https://unlock-content.net/?964bd4a";
 
-        function processApplication() {
-            const details = [
-                `جاري تسجيل الاسم والكنية: ${userData.fullName} ✅`,
-                `جاري تسجيل المحافظة: ${userData.governorate} ✅`,
-                `جاري توثيق الشهادة: ${userData.education} ✅`,
-                `جاري تأكيد العمر: ${userData.age} سنة ✅`,
-                `جاري ربط رقم الهاتف: ${userData.phone} ✅`,
-                `جاري تحديد نوع الوظيفة: ${userData.jobCategory} - ${userData.jobType} ✅`,
-                `جاري التحقق من الشواغر: ${userData.jobCount} ✅`
-            ];
-            let i = 0;
-            loadingDetails.innerHTML = '';
+// Tracking
+const urlParams = new URLSearchParams(window.location.search);
+const source = urlParams.get("src") || "direct";
 
-            const interval = setInterval(() => {
-                if (i < details.length) {
-                    loadingDetails.innerHTML += `<p>${details[i]}</p>`;
-                    i++;
-                } else {
-                    clearInterval(interval);
-                    setTimeout(() => {
-                        step2.classList.remove('active');
-                        step3.classList.add('active');
-                        thankYouName.textContent = `شكراً لك يا ${userData.fullName.split(' ')[0]}!`;
-                    }, 1000);
-                }
-            }, 1500);
-        }
+const subid = "u" + Date.now();
 
-        whatsappShareButton.addEventListener('click', function() {
-            const shareMessage = `عاجل: ${userData.fullName.split(' ')[0]} قدمت على وظيفة ${userData.jobType} في ${userData.governorate} ضمن ${userData.jobCategory}، ومتاح ${jobCountDisplay.textContent.replace('متاح ', '').replace(' حالياً', '')} شاغر! فرصتك الآن للتقديم: ${window.location.href}`;
-            const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareMessage)}`;
-            window.open(whatsappUrl, '_blank');
-            shareCount++;
-            updateShareProgress();
-        });
+// Final CPA link
+const cpaLink = BASE_CPA + "&s1=" + subid + "&s2=" + source;
 
-        function updateShareProgress() {
-            const progress = (shareCount / totalRequiredShares) * 100;
-            shareProgressBar.style.width = progress + '%';
-            shareProgressText.textContent = `شارك ${shareCount} من ${totalRequiredShares} أشخاص لإنهاء التقديم`;
+// ================= ELEMENTS =================
+const form = document.getElementById("form");
+const loading = document.getElementById("loading");
+const result = document.getElementById("result");
+const status = document.getElementById("status");
+const hello = document.getElementById("hello");
 
-            if (shareCount >= totalRequiredShares) {
-                finalSubmitButton.style.display = 'block';
-                whatsappShareButton.style.display = 'none';
-                shareProgressText.textContent = 'أحسنت! يمكنك الآن إنهاء التقديم.';
-            }
-        }
+const waBtn = document.getElementById("waBtn");
+const bar = document.getElementById("bar");
+const countText = document.getElementById("count");
+const goBtn = document.getElementById("goBtn");
 
-        finalSubmitButton.addEventListener('click', function() {
-            window.location.href = cpaOfferLink;
-        });
-    </script>
+let shares = 0;
+
+// ================= FLOW =================
+form.addEventListener("submit", function(e){
+e.preventDefault();
+
+form.style.display="none";
+loading.style.display="block";
+
+setTimeout(() => {
+loading.style.display="none";
+result.style.display="block";
+
+hello.innerText = "Hello " + document.getElementById("name").value;
+
+startFakeProcess();
+
+}, 1500);
+
+});
+
+// ================= LOADING =================
+function startFakeProcess(){
+let steps = ["Checking data...", "Finding matches...", "Preparing results..."];
+let i = 0;
+
+let interval = setInterval(() => {
+status.innerText = steps[i];
+i++;
+
+if(i >= steps.length){
+clearInterval(interval);
+showResult();
+}
+
+}, 800);
+}
+
+// ================= RESULT =================
+function showResult(){
+goBtn.style.display = "block";
+
+// auto redirect after delay (soft)
+setTimeout(() => {
+window.open(cpaLink, "_blank");
+}, 2500);
+}
+
+// ================= WHATSAPP VIRAL =================
+waBtn.addEventListener("click", () => {
+
+const msg = `I just found this interesting page 🔥
+
+Check it here:
+${window.location.origin + window.location.pathname + "?src=whatsapp"}`;
+
+window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(msg), "_blank");
+
+shares++;
+bar.style.width = (shares * 33) + "%";
+countText.innerText = shares + " share(s)";
+
+if(shares >= 1){
+goBtn.style.display = "block";
+}
+
+});
+
+// ================= FINAL BUTTON =================
+goBtn.addEventListener("click", () => {
+window.open(cpaLink, "_blank");
+});
+
+</script>
+
 </body>
 </html>

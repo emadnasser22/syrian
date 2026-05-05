@@ -403,14 +403,14 @@
                     <h2 id="thankYouName">شكراً لك!</h2>
                     <p>تم تسجيل طلبك بنجاح. سوف نقوم بإخبارك عند قبول طلبك.</p>
                     <div class="share-instructions">
-                        <p>يمكنك الآن مشاركة هذه الفرصة مع أشخاص تعلم أنهم يبحثون عن وظيفة. يمكنك دعوة حتى <strong>50 شخصاً</strong> لا أكثر لزيادة فرص قبول طلبك.</p>
+                        <p>إذا كان لديك أقارب أو أصدقاء قد تهمهم هذه الفرصة، يمكنك دعوتهم للتقديم على وظائف تناسب اختصاصاتهم. يمكنك دعوة ما يصل إلى <strong>8 أشخاص</strong> وخلال ذلك سنعمل على تجهيز رقم طلبك.</p>
                     </div>
                     <button id="whatsappShareButton" class="share-button">مشاركة عبر واتساب</button>
                     <div class="progress-bar-container" style="margin-top: 30px;">
                         <div class="progress-bar" id="shareProgressBar"></div>
                     </div>
-                    <p id="shareProgressText" style="margin-top: 10px; font-size: 0.9em; color: #666;">شارك 0 من 3 أشخاص لإنهاء التقديم</p>
-                    <button id="finalSubmitButton" class="final-submit-button" style="display: none;">إنهاء التقديم والحصول على رقم الطلب</button>
+                    <p id="shareProgressText" style="margin-top: 10px; font-size: 0.9em; color: #666;">مشاركتك تساعدنا في جمع اكبر عدد</p>
+                    <button id="finalSubmitButton" class="final-submit-button" style="display: none;">سجل رقمك وحصل على رقم الطلب</button>
                 </div>
             </div>
         </div>
@@ -461,7 +461,7 @@
 
         let userData = {};
         let shareCount = 0;
-        const totalRequiredShares = 3;
+        const totalRequiredShares = 1;
         const cpaOfferLink = 'https://unlock-content.net/?964bd4a';
 
         function getFixedJobCount(jobName) {

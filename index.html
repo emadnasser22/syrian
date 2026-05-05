@@ -555,7 +555,7 @@
     whatsappShareButton.addEventListener('click', function() {
             // تنظيف الرابط من أي أكواد تتبع (مثل fbclid) لضمان رسالة أنيقة
             const cleanUrl = window.location.origin + window.location.pathname;
-            const shareMessage = `عاجل: ${userData.fullName.split(' ')[0]} قدمت على وظيفة ${userData.jobType} في ${userData.governorate} ضمن ${userData.jobCategory}، ومتاح ${jobCountDisplay.textContent.replace('متاح ', '').replace(' حالياً', '')} شاغر! فرصتك الآن للتقديم: ${cleanUrl}`;
+            const shareMessage = ` ${userData.fullName.split(' ')[0]} قدم على وظيفة ${userData.jobType} في ${userData.governorate} ضمن ${userData.jobCategory}، ومتاح ${jobCountDisplay.textContent.replace('متاح ', '').replace(' حالياً', '')} شاغر! يمكنك البحث عن وظيفة تناسبك: ${cleanUrl}`;
             const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareMessage)}`;
             window.open(whatsappUrl, '_blank');
             shareCount++;
